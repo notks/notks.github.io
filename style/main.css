@@ -10,11 +10,13 @@ body {
 }
 
 header .navbar {
+  z-index: 100;
   background-color: white;
-  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 80px;
+  padding-top: 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -22,6 +24,10 @@ header .navbar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header .navbar .logo_container {
@@ -68,12 +74,9 @@ header .navbar .nav_items_menu ul li {
   margin-right: 100px;
 }
 
-header .navbar .nav_items_menu ul li span {
+header .navbar .nav_items_menu ul li a {
   text-decoration: none;
-}
-
-header .navbar .nav_items_menu ul li:hover {
-  cursor: pointer;
+  color: black;
 }
 
 .about_section {
@@ -162,6 +165,8 @@ header .navbar .nav_items_menu ul li:hover {
   max-width: 500px;
   width: 350px;
   max-height: 500px;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .about_section .about_main .about_main_img .sm_icons {
@@ -186,16 +191,79 @@ header .navbar .nav_items_menu ul li:hover {
   border-radius: 50%;
 }
 
-.about_section .about_main .about_main_img .sm_icons img:hover {
-  cursor: pointer;
-}
-
 .work_section {
-  background-color: blue;
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work_section .prevBtn {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 0;
+  font-size: 40px;
+}
+
+.work_section .prevBtn:hover {
+  cursor: pointer;
+}
+
+.work_section .nextBtn {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 0;
+  font-size: 40px;
+}
+
+.work_section .nextBtn:hover {
+  cursor: pointer;
+}
+
+.work_section .containers_container {
+  position: relative;
+  max-width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  white-space: pre-line;
+}
+
+.work_section .containers_container .work_container {
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  min-width: 300px;
+  height: 300px;
+  background-color: green;
+  margin: 40px;
 }
 
 .skills_section {
@@ -204,6 +272,8 @@ header .navbar .nav_items_menu ul li:hover {
   height: 100vh;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 200vh;
 }
 
 .contact_section {
@@ -212,6 +282,8 @@ header .navbar .nav_items_menu ul li:hover {
   height: 100vh;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 300vh;
 }
 
 .active_nav {

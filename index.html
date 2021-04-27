@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="./style/main.css" rel="stylesheet" />
-    <script src="./script.js" defer></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <header>
@@ -33,10 +33,10 @@
         </div>
         <div class="nav_items_menu">
           <ul>
-            <li class="active_nav"><span>About</span></li>
-            <li><span>Work</span></li>
-            <li><span>Skills</span></li>
-            <li><span>Contact</span></li>
+            <li class="active_nav" id="about"><a href="#1">About</a></li>
+            <li id="work"><a href="#2">Work</a></li>
+            <li id="skills"><a href="#3">Skills</a></li>
+            <li id="contact"><a href="#4">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -52,7 +52,7 @@
                 APPLICATIONS</span
               >
             </span>
-            <br />that are functional and stunning
+            <br />that are functional and stunning!
           </p>
           <a href="./static/cv-english (1).pdf" download="PDF"
             ><button>Download resume</button></a
@@ -76,7 +76,24 @@
         </div>
       </div>
     </section>
-    <section id="2" class="work_section"></section>
+
+    <section id="2" class="work_section">
+      <button id="prevBtn" class="prevBtn">&#8249;</button>
+
+      <div class="containers_container">
+        <div id="s1" class="work_container">1</div>
+        <div id="s2" class="work_container">2</div>
+        <div id="s3" class="work_container">3</div>
+        <div id="s4" class="work_container">4</div>
+        <div id="s5" class="work_container">5</div>
+        <div id="s6" class="work_container">6</div>
+        <div id="s7" class="work_container">7</div>
+        <div id="s8" class="work_container">8</div>
+        <div id="s9" class="work_container">9</div>
+        <div id="s10" class="work_container">10</div>
+      </div>
+      <button id="nextBtn" class="nextBtn">&#8250;</button>
+    </section>
     <section id="3" class="skills_section"></section>
     <section id="4" class="contact_section"></section>
   </body>

@@ -8,13 +8,22 @@ body {
   max-width: 100vw;
 }
 header {
-  //  margin-top: 30px;
   .navbar {
+    z-index: 100;
+    // background-color: red;
     background-color: white;
-    margin-top: 30px;
+    // margin-top: 30px;
     display: flex;
+    height: 80px;
+    padding-top: 30px;
     flex-direction: row;
     justify-content: space-between;
+    // background-color: green;
+    // position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     // background-color: green;
     .logo_container {
       margin-left: 70px;
@@ -28,7 +37,7 @@ header {
       }
     }
     .nav_items_menu {
-      //  background-color: blue;
+      //background-color: blue;
       display: flex;
       align-items: center;
       ul {
@@ -38,11 +47,10 @@ header {
         list-style: none;
         li {
           margin-right: 100px;
-          span {
+          //  background-color: purple;
+          a {
             text-decoration: none;
-          }
-          &:hover {
-            cursor: pointer;
+            color: black;
           }
         }
       }
@@ -113,6 +121,8 @@ header {
           max-width: 500px;
           width: 350px;
           max-height: 500px;
+          min-width: 100px;
+          min-height: 100px;
         }
       }
       .sm_icons {
@@ -126,21 +136,77 @@ header {
           width: 64px;
           height: 64px;
           border-radius: 50%;
-
-          &:hover {
-            cursor: pointer;
-          }
         }
       }
     }
   }
 }
 .work_section {
-  background-color: blue;
+  // border-top: 2px solid grey;
+  // background-color: red;
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
+  // position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .prevBtn {
+    //position: relative;
+
+    // top: 50vh;
+    //z-index: 1000;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 0;
+    font-size: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .nextBtn {
+    //position: relative;
+    //  right: -92.5vw;
+    //  top: 50vh;
+    //z-index: 1000;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 0;
+    font-size: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .containers_container {
+    //  background-color: purple;
+    position: relative;
+    // top: 50%;
+    max-width: 1140px;
+    //transform: translateY(-50%);
+    //left: 50%;
+    //transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    white-space: pre-line;
+    //background-color: blue;
+
+    .work_container {
+      transition: transform 1000ms;
+      //margin: 50% 25px 50% 25px;
+      align-self: center;
+      min-width: 300px;
+      height: 300px;
+      background-color: green;
+
+      margin: 40px;
+    }
+  }
 }
 .skills_section {
   background-color: green;
@@ -148,6 +214,8 @@ header {
   height: 100vh;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 200vh;
 }
 .contact_section {
   background-color: yellow;
@@ -155,6 +223,8 @@ header {
   height: 100vh;
   margin: 0;
   padding: 0;
+  position: absolute;
+  top: 300vh;
 }
 
 .active_nav {
