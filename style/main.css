@@ -86,8 +86,6 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .about_section .about_main {
-  -webkit-transform: translateY(-60px);
-          transform: translateY(-60px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,8 +94,6 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .about_section .about_main .about_main_text {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
   width: 60vw;
   height: 100vh;
   display: -webkit-box;
@@ -140,8 +136,6 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .about_section .about_main .about_main_img {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
   width: 40vw;
   height: 100vh;
   display: -webkit-box;
@@ -192,6 +186,8 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .work_section {
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -212,6 +208,8 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .work_section .prevBtn {
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
   height: 50px;
   width: 50px;
   background-color: transparent;
@@ -224,11 +222,17 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .work_section .nextBtn {
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
   height: 50px;
   width: 50px;
   background-color: transparent;
   border: 0;
   font-size: 40px;
+}
+
+.work_section .nextBtn:focus {
+  border: none;
 }
 
 .work_section .nextBtn:hover {
@@ -249,6 +253,7 @@ header .navbar .nav_items_menu ul li a {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  height: 100%;
   white-space: pre-line;
 }
 
@@ -262,8 +267,104 @@ header .navbar .nav_items_menu ul li a {
       align-self: center;
   min-width: 300px;
   height: 300px;
-  background-color: green;
   margin: 40px;
+}
+
+.work_section .containers_container .work_container .tilted_container {
+  -webkit-transition: transgorm 500ms;
+  transition: transgorm 500ms;
+  width: 110%;
+  height: 110%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.work_section .containers_container .work_container .tilted_container:hover {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.work_section .containers_container .work_container .tilted_container:hover img {
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  height: 50%;
+  position: absulute;
+  top: 0px;
+  left: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: none;
+          filter: none;
+}
+
+.work_section .containers_container .work_container .tilted_container:hover .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.work_section .containers_container .work_container .tilted_container:hover .buttons .project_btn {
+  border-radius: 50%;
+}
+
+.work_section .containers_container .work_container .tilted_container:hover .buttons .project_btn img {
+  margin-top: -40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.work_section .containers_container .work_container .tilted_container:hover p {
+  margin-top: -25px;
+  padding: 5px;
+  display: block;
+  line-height: 1.5;
+}
+
+.work_section .containers_container .work_container .tilted_container p {
+  display: none;
+  text-align: center;
+}
+
+.work_section .containers_container .work_container .tilted_container .buttons {
+  display: none;
+}
+
+.work_section .containers_container .work_container .tilted_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .skills_section {
