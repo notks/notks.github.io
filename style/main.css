@@ -295,10 +295,10 @@ header .navbar .nav_items_menu ul li a {
 .work_section .containers_container .work_container .tilted_container:hover {
   -webkit-transform: translateY(-40px);
           transform: translateY(-40px);
-  -webkit-transition: -webkit-transform 500ms;
-  transition: -webkit-transform 500ms;
-  transition: transform 500ms;
-  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transition: -webkit-transform 1000ms;
+  transition: -webkit-transform 1000ms;
+  transition: transform 1000ms;
+  transition: transform 1000ms, -webkit-transform 1000ms;
 }
 
 .work_section .containers_container .work_container .tilted_container:hover img {
@@ -344,8 +344,9 @@ header .navbar .nav_items_menu ul li a {
 
 .work_section .containers_container .work_container .tilted_container:hover p {
   margin-top: -25px;
-  padding: 5px;
+  width: 290px;
   display: block;
+  font-size: 15px;
   line-height: 1.5;
 }
 
