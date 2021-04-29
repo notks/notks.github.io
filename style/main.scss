@@ -232,7 +232,7 @@ header {
           0 20px 40px 0 rgba(0, 0, 0, 0.19);
         &:hover {
           transform: translateY(-40px);
-          transition: transform 500ms;
+          transition: transform 1000ms;
           img {
             transition: 250ms;
             height: 50%;
@@ -256,6 +256,7 @@ header {
               border-radius: 50%;
               img {
                 // background-color: red;
+
                 margin-top: -40px;
                 width: 50px;
                 height: 50px;
@@ -265,9 +266,11 @@ header {
           }
           p {
             margin-top: -25px;
-            padding: 5px;
+            width: 290px;
             display: block;
+            font-size: 15px;
             line-height: 1.5;
+            // background-color: red;
           }
         }
         p {
