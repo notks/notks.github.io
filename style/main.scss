@@ -142,6 +142,8 @@ header {
   }
 }
 .work_section {
+  //margin-top: -50px;
+  //background-color: orange;
   // border-top: 2px solid grey;
   transform: skewY(-10deg);
   // background-color: red;
@@ -149,7 +151,7 @@ header {
   // background-color: red;
   width: 100vw;
   height: 100vh;
-  margin: 0;
+  //margin: 0;
   padding: 0;
   // position: absolute;
   display: flex;
@@ -296,22 +298,47 @@ header {
   }
 }
 .skills_section {
-  background-color: green;
+  // /background-color: green;
   width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 200vh;
+  padding-top: 150px;
+  //height: 100vh;
+  //  margin: 0;
+  //padding: 0;
+
+  .skills_main {
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      font-size: 25px;
+      background-color: transparent;
+    }
+    //background-color: blue;
+
+    width: 100%;
+    .skills_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 100px;
+      margin-right: 100px;
+      img {
+        margin: 10px;
+        // filter: brightness(0);
+        height: 200px;
+        width: 400px;
+      }
+    }
+  }
 }
 .contact_section {
   background-color: yellow;
   width: 100vw;
-  height: 100vh;
+  //height: 100vh;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 300vh;
 }
 
 .active_nav {
