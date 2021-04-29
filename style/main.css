@@ -190,7 +190,6 @@ header .navbar .nav_items_menu ul li a {
           transform: skewY(-10deg);
   width: 100vw;
   height: 100vh;
-  margin: 0;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -369,23 +368,56 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .skills_section {
-  background-color: green;
   width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 200vh;
+  padding-top: 150px;
+}
+
+.skills_section .skills_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.skills_section .skills_main span {
+  font-size: 25px;
+  background-color: transparent;
+}
+
+.skills_section .skills_main .skills_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.skills_section .skills_main .skills_container img {
+  margin: 10px;
+  height: 200px;
+  width: 400px;
 }
 
 .contact_section {
   background-color: yellow;
   width: 100vw;
-  height: 100vh;
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 300vh;
 }
 
 .active_nav {
