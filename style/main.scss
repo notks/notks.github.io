@@ -100,6 +100,7 @@ header {
           font-weight: bold;
           background-color: black;
           color: white;
+          outline: none;
         }
       }
     }
@@ -161,7 +162,7 @@ header {
   .prevBtn {
     //position: relative;
     transform: skewY(-10deg);
-
+    outline: none;
     // top: 50vh;
     //z-index: 1000;
     height: 50px;
@@ -180,7 +181,7 @@ header {
     //  right: -92.5vw;
     //  top: 50vh;
     //z-index: 1000;
-
+    outline: none;
     height: 50px;
     width: 50px;
     background-color: transparent;
@@ -284,6 +285,8 @@ header {
         }
         img {
           width: 100%;
+          box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2),
+            0 20px 40px 0 rgba(0, 0, 0, 0.19);
           height: 100%;
           object-fit: cover;
           filter: blur(5px);
@@ -298,6 +301,7 @@ header {
   }
 }
 .skills_section {
+  //min-height: 100vh;
   // /background-color: green;
   width: 100vw;
   padding-top: 150px;
@@ -334,13 +338,78 @@ header {
   }
 }
 .contact_section {
-  background-color: yellow;
+  // background-color: yellow;
   width: 100vw;
-  //height: 100vh;
-  margin: 0;
-  padding: 0;
+  padding-top: 50px;
+  padding-bottom: 10px; //height: 100vh;
+  // margin: 0;
+  //padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    margin: 20px;
+    border-radius: 50px;
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    text-indent: 20px;
+    box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2),
+      0 20px 40px 0 rgba(0, 0, 0, 0.19);
+    &:focus {
+      border: 1px solid black;
+    }
+  }
+  textarea {
+    margin: 10px;
+    width: 500px;
+    height: 300px;
+    border: none;
+    border-radius: 15px;
+    resize: none;
+    text-indent: 10px;
+    outline: none;
+    font-size: 15px;
+    box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2),
+      0 20px 40px 0 rgba(0, 0, 0, 0.19);
+    &:focus {
+      border: 1px solid black;
+    }
+  }
+  button {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    outline: none;
+  }
+  label {
+    transform: translateX(-200px);
+  }
 }
 
 .active_nav {
   font-weight: bold;
+}
+.footer {
+  width: 100vw;
+  height: 100px;
+
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.error {
+  border: 1px solid red !important;
 }
