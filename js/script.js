@@ -168,3 +168,37 @@ let messageobj = document.getElementById("contact_message");
 messageobj.addEventListener("click", () => {
   messageobj.classList.remove("error");
 });
+var menu = document.getElementsByClassName("nav_items_menu")[0];
+var isBurgerOpen = false;
+var burger = document.getElementById("burger");
+
+burger.addEventListener("click", () => {
+  if (!isBurgerOpen) {
+    menu.style.transform = "translateX(0)";
+    // menu.style.position = "fixed";
+    console.log(notBlured);
+
+    menu.style.zIndex = "10";
+    burger.style.zIndex = "100";
+
+    isBurgerOpen = !isBurgerOpen;
+  } else if (isBurgerOpen) {
+    //document.getElementsByClassName("nav_items_menu")[0].style.display = "none";
+    menu.style.transform = "translateX(200px)";
+
+    burger.style.zIndex = "100";
+    menu.style.zIndex = "10";
+    isBurgerOpen = !isBurgerOpen;
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target !== menu && e.target !== burger) {
+    // menu.style.display = "none";
+    menu.style.transform = "translateX(200px)";
+    menu.style.zIndex = "10";
+
+    burger.style.zIndex = "100";
+    isBurgerOpen = !isBurgerOpen;
+  }
+});

@@ -1,12 +1,11 @@
+@import "./mobile";
 body {
   margin: 0;
   padding: 0;
   background-color: white;
   color: black;
 }
-.wrapper {
-  max-width: 100vw;
-}
+
 header {
   .navbar {
     z-index: 100;
@@ -23,8 +22,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    // background-color: green;
+    cursor: pointer;
+
     .logo_container {
       margin-left: 70px;
       display: flex;
@@ -69,7 +68,7 @@ header {
     height: 100vh;
     //background-color: red;
     .about_main_text {
-      //  background-color: green;
+      // background-color: green;
       // transform: translateY(-20px);
       width: 60vw;
       height: 100vh;
@@ -80,11 +79,13 @@ header {
       margin-bottom: 500px;
 
       p {
+        //  background-color: red;
         margin-left: 50px;
         //  background-color: blue;
         font-size: 50px;
 
         span {
+          // background-color: purple;
           font-size: 85px;
           span {
             font-weight: bold;
@@ -109,7 +110,7 @@ header {
       width: 40vw;
       height: 100vh;
 
-      // background-color: yellow;
+      //  background-color: yellow;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -119,10 +120,10 @@ header {
         img {
           border-radius: 50%;
           height: 350px;
-          max-width: 500px;
+          //max-width: 500px;
           width: 350px;
           max-height: 500px;
-          min-width: 100px;
+          //min-width: 100px;
           min-height: 100px;
         }
       }
@@ -222,7 +223,7 @@ header {
 
       margin: 40px;
       .tilted_container {
-        transition: transgorm 500ms;
+        transition: transform 500ms;
         //background-color: green;
         width: 110%;
         height: 110%;
@@ -315,7 +316,9 @@ header {
     flex-direction: column;
     align-items: center;
     span {
+      text-align: center;
       font-size: 25px;
+      width: 100%;
       background-color: transparent;
     }
     //background-color: blue;
@@ -332,12 +335,15 @@ header {
         margin: 10px;
         // filter: brightness(0);
         height: 200px;
-        width: 400px;
+        width: 450px;
+      }
+      .sq {
+        width: 200px;
       }
     }
   }
 }
-.contact_section {
+/*.contact_section {
   // background-color: yellow;
   width: 100vw;
   padding-top: 50px;
@@ -392,7 +398,7 @@ header {
     transform: translateX(-200px);
   }
 }
-
+*/
 .active_nav {
   font-weight: bold;
 }
@@ -409,7 +415,142 @@ header {
     font-size: 20px;
   }
 }
+.burger {
+  display: none;
+  margin-right: 20px;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+}
 
 .error {
   border: 1px solid red !important;
+}
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@include mediaSm {
+  .about_section {
+    // background-color: red;
+    //width: 200%;
+    .about_main {
+      //  background-color: yellow;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+
+      .about_main_img {
+        width: 100vw;
+        .main_img {
+          // background-color: green;
+          img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+      }
+      .about_main_text {
+        width: 100vw;
+        // background-color: blue;
+        // margin-left: -20px;
+        margin-bottom: 0px;
+        p {
+          font-size: 25px;
+          span {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+  .work_section {
+    // background-color: blue;
+    margin-top: 50px;
+    // margin-left: -10px;
+    padding: 0;
+    //background-color: red;
+    height: 2350px;
+    //transform: skewY(0deg);
+    .prevBtn {
+      display: none;
+    }
+    .nextBtn {
+      display: none;
+    }
+    .containers_container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  body {
+    // background-color: blue;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  header {
+    width: 100vw;
+    .navbar {
+      position: relative;
+
+      align-items: center;
+      // background-color: purple;
+
+      .logo_container {
+        margin-left: 20px;
+      }
+      width: 100vw;
+      .nav_items_menu {
+        //transform: translateY(-50%);
+
+        background-color: black;
+        top: 0;
+        right: 0;
+        z-index: -10;
+        // display: none;
+        transform: translateX(200px);
+        transition: transform 250ms;
+        position: fixed;
+        width: 200px;
+        height: 100vmax;
+        ul {
+          height: 100vh;
+          flex-direction: column;
+          justify-content: space-evenly;
+          //background-color: green;
+
+          align-items: center;
+          li {
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .skills_section {
+    //  background-color: green;
+    .skills_main {
+      .skills_container {
+        img {
+          width: 200px;
+          height: 100px;
+        }
+        .sq {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: block;
+  }
 }
