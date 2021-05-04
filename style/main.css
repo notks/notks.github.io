@@ -5,12 +5,17 @@ body {
   color: black;
 }
 
+header:hover {
+  cursor: default;
+}
+
 header .navbar {
   z-index: 100;
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100vw;
   height: 80px;
   padding-top: 30px;
   -webkit-box-orient: horizontal;
@@ -49,6 +54,7 @@ header .navbar .nav_items_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -359,8 +365,6 @@ header .navbar .nav_items_menu ul li a {
 
 .work_section .containers_container .work_container .tilted_container img {
   width: 100%;
-  -webkit-box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -369,6 +373,7 @@ header .navbar .nav_items_menu ul li a {
 }
 
 .skills_section {
+  min-height: 100vh;
   width: 100vw;
   padding-top: 150px;
 }
@@ -420,62 +425,73 @@ header .navbar .nav_items_menu ul li a {
   width: 200px;
 }
 
-/*.contact_section {
-  // background-color: yellow;
+.contact_section {
   width: 100vw;
   padding-top: 50px;
-  padding-bottom: 10px; //height: 100vh;
-  // margin: 0;
-  //padding: 0;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  input {
-    margin: 20px;
-    border-radius: 50px;
-    width: 500px;
-    height: 50px;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    text-indent: 20px;
-    box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2),
-      0 20px 40px 0 rgba(0, 0, 0, 0.19);
-    &:focus {
-      border: 1px solid black;
-    }
-  }
-  textarea {
-    margin: 10px;
-    width: 500px;
-    height: 300px;
-    border: none;
-    border-radius: 15px;
-    resize: none;
-    text-indent: 10px;
-    outline: none;
-    font-size: 15px;
-    box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2),
-      0 20px 40px 0 rgba(0, 0, 0, 0.19);
-    &:focus {
-      border: 1px solid black;
-    }
-  }
-  button {
-    width: 150px;
-    height: 50px;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    outline: none;
-  }
-  label {
-    transform: translateX(-200px);
-  }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-*/
+
+.contact_section input {
+  margin: 20px;
+  border-radius: 50px;
+  width: 500px;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  text-indent: 20px;
+  -webkit-box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact_section input:focus {
+  border: 1px solid black;
+}
+
+.contact_section textarea {
+  margin: 10px;
+  width: 500px;
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+  resize: none;
+  text-indent: 10px;
+  outline: none;
+  font-size: 15px;
+  -webkit-box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2), 0 20px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact_section textarea:focus {
+  border: 1px solid black;
+}
+
+.contact_section button {
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+
+.contact_section label {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+}
+
 .active_nav {
   font-weight: bold;
 }
@@ -590,8 +606,8 @@ header .navbar .nav_items_menu ul li a {
     top: 0;
     right: 0;
     z-index: -10;
-    -webkit-transform: translateX(200px);
-            transform: translateX(200px);
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
     -webkit-transition: -webkit-transform 250ms;
     transition: -webkit-transform 250ms;
     transition: transform 250ms;
@@ -622,6 +638,16 @@ header .navbar .nav_items_menu ul li a {
   }
   .skills_section .skills_main .skills_container .sq {
     width: 100px;
+  }
+  .contact_section input {
+    width: 250px;
+  }
+  .contact_section textarea {
+    width: 250px;
+  }
+  .contact_section label {
+    -webkit-transform: translateX(-80px);
+            transform: translateX(-80px);
   }
   .burger {
     display: block;

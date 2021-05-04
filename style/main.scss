@@ -7,12 +7,16 @@ body {
 }
 
 header {
+  &:hover {
+    cursor: default;
+  }
   .navbar {
     z-index: 100;
     // background-color: red;
     background-color: white;
     // margin-top: 30px;
     display: flex;
+    width: 100vw;
     height: 80px;
     padding-top: 30px;
     flex-direction: row;
@@ -38,6 +42,7 @@ header {
     .nav_items_menu {
       //background-color: blue;
       display: flex;
+      margin-right: 50px;
       align-items: center;
       ul {
         display: flex;
@@ -286,8 +291,7 @@ header {
         }
         img {
           width: 100%;
-          box-shadow: -10px 15px 20px 0 rgba(0, 0, 0, 0.2),
-            0 20px 40px 0 rgba(0, 0, 0, 0.19);
+
           height: 100%;
           object-fit: cover;
           filter: blur(5px);
@@ -302,7 +306,7 @@ header {
   }
 }
 .skills_section {
-  //min-height: 100vh;
+  min-height: 100vh;
   // /background-color: green;
   width: 100vw;
   padding-top: 150px;
@@ -343,7 +347,7 @@ header {
     }
   }
 }
-/*.contact_section {
+.contact_section {
   // background-color: yellow;
   width: 100vw;
   padding-top: 50px;
@@ -398,7 +402,7 @@ header {
     transform: translateX(-200px);
   }
 }
-*/
+
 .active_nav {
   font-weight: bold;
 }
@@ -514,7 +518,7 @@ header {
         right: 0;
         z-index: -10;
         // display: none;
-        transform: translateX(200px);
+        transform: translateX(250px);
         transition: transform 250ms;
         position: fixed;
         width: 200px;
@@ -547,6 +551,17 @@ header {
           width: 100px;
         }
       }
+    }
+  }
+  .contact_section {
+    input {
+      width: 250px;
+    }
+    textarea {
+      width: 250px;
+    }
+    label {
+      transform: translateX(-80px);
     }
   }
 
