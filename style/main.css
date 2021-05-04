@@ -129,6 +129,7 @@ header .navbar .nav_items_menu ul li a {
   background-color: #121212;
   color: #ffffff;
   outline: none;
+  z-index: 100;
 }
 
 .about_section .about_main .about_main_img {
