@@ -1,0 +1,13 @@
+.footer {
+  width: 100vw;
+  height: 100px;
+
+  background-color: $secondarycolor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $white;
+    font-size: 20px;
+  }
+}
