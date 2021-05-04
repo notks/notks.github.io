@@ -1,0 +1,49 @@
+header {
+  &:hover {
+    cursor: default;
+  }
+  .navbar {
+    z-index: 100;
+    background-color: $primarycolor;
+    display: flex;
+    width: 100vw;
+    height: 80px;
+    padding-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    .logo_container {
+      margin-left: 70px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      svg {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    .nav_items_menu {
+      display: flex;
+      margin-right: 50px;
+      align-items: center;
+      ul {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        list-style: none;
+        li {
+          margin-right: 100px;
+          a {
+            text-decoration: none;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

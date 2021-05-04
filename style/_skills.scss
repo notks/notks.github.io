@@ -1,0 +1,36 @@
+.skills_section {
+  min-height: 100vh;
+  background-color: $primarycolor;
+  width: 100vw;
+  padding-top: 150px;
+
+  .skills_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+      text-align: center;
+      font-size: 25px;
+      width: 100%;
+      background-color: transparent;
+    }
+
+    width: 100%;
+    .skills_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 100px;
+      margin-right: 100px;
+      img {
+        margin: 10px;
+        height: 200px;
+        width: 450px;
+      }
+      .sq {
+        width: 200px;
+      }
+    }
+  }
+}
