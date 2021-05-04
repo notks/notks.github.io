@@ -127,7 +127,7 @@ send.addEventListener("click", () => {
       message: message.value,
     };
     console.log(msg);
-    let url = "http://127.0.0.1:3000/";
+    let url = "https://notks-portfolio-email-service.herokuapp.com/";
     fetch(url, {
       headers: {
         "Content-Type": "application/json",
@@ -137,6 +137,10 @@ send.addEventListener("click", () => {
     })
       .then((date) => {
         console.log("done");
+        alert("Your email is sent!");
+        name.value = "";
+        email.value = "";
+        message.value = "";
       })
       .catch((e) => {
         console.log("error");
@@ -174,9 +178,8 @@ var burger = document.getElementById("burger");
 
 burger.addEventListener("click", () => {
   if (!isBurgerOpen) {
-    menu.style.transform = "translateX(0)";
+    menu.style.transform = "translateX(50px)";
     // menu.style.position = "fixed";
-    console.log(notBlured);
 
     menu.style.zIndex = "10";
     burger.style.zIndex = "100";
@@ -184,7 +187,7 @@ burger.addEventListener("click", () => {
     isBurgerOpen = !isBurgerOpen;
   } else if (isBurgerOpen) {
     //document.getElementsByClassName("nav_items_menu")[0].style.display = "none";
-    menu.style.transform = "translateX(200px)";
+    menu.style.transform = "translateX(250px)";
 
     burger.style.zIndex = "100";
     menu.style.zIndex = "10";
@@ -192,13 +195,15 @@ burger.addEventListener("click", () => {
   }
 });
 
-document.addEventListener("click", (e) => {
-  if (e.target !== menu && e.target !== burger) {
-    // menu.style.display = "none";
-    menu.style.transform = "translateX(200px)";
-    menu.style.zIndex = "10";
+if (window.innerWidth < 500) {
+  document.addEventListener("click", (e) => {
+    if (e.target !== menu && e.target !== burger) {
+      // menu.style.display = "none";
+      menu.style.transform = "translateX(250px)";
+      menu.style.zIndex = "10";
 
-    burger.style.zIndex = "100";
-    isBurgerOpen = !isBurgerOpen;
-  }
-});
+      burger.style.zIndex = "100";
+      isBurgerOpen = !isBurgerOpen;
+    }
+  });
+}
