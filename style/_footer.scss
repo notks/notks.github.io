@@ -4,10 +4,14 @@
 
   background-color: $secondarycolor;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   p {
     color: $white;
     font-size: 20px;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
