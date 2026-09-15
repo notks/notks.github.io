@@ -47,6 +47,7 @@ export const projects = [
     hasLinks: true,
     hasCode: false,
     inDev: false,
+    image: '/vigil.png',
     slotHint: 'Vigil AI screenshot',
   },
   {
@@ -61,6 +62,7 @@ export const projects = [
     hasLinks: false,
     hasCode: false,
     inDev: true,
+    image: '/contexta2.png',
     slotHint: 'Contexta screenshot',
   },
 ];

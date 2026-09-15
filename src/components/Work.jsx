@@ -17,7 +17,16 @@ export default function Work() {
           {projects.map((project) => (
             <article key={project.name} className={styles.card}>
               <div className={styles.media}>
-                <span className={styles.mediaCaption}>{project.slotHint}</span>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.name} product screenshot`}
+                    className={styles.mediaImage}
+                    loading="lazy"
+                  />
+                ) : (
+                  <span className={styles.mediaCaption}>{project.slotHint}</span>
+                )}
               </div>
               <div className={styles.cardBody}>
                 <h3 className={styles.cardTitle}>{project.name}</h3>
