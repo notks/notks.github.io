@@ -1,0 +1,99 @@
+.hero {
+  padding: 140px 32px 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 64px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--accent);
+  margin: 0 0 20px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.heading {
+  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 24px;
+  color: var(--fg);
+  animation: fadeUp 0.6s ease both;
+}
+
+.body {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--fg-muted);
+  max-width: 520px;
+  margin: 0 0 36px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  animation: fadeUp 0.6s ease both;
+}
+
+.primaryButton {
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.15s ease;
+}
+
+.primaryButton:hover {
+  opacity: 0.9;
+}
+
+.secondaryButton {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  color: var(--fg);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.secondaryButton:hover {
+  background: var(--bg-subtle);
+}
+
+.socialRow {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s ease both;
+}
+
+.socialLink {
+  color: var(--fg-muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.socialLink:hover {
+  color: var(--fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eyebrow, .heading, .body, .buttonRow, .socialRow {
+    animation: none;
+  }
+}

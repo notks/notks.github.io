@@ -1,0 +1,158 @@
+.section {
+  padding: 100px 32px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 80px;
+}
+
+.head {
+  margin-bottom: 56px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+
+.media {
+  aspect-ratio: 16 / 9;
+  background: repeating-linear-gradient(135deg, var(--bg-subtle) 0 12px, var(--border) 12px 13px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediaCaption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+
+.cardBody {
+  padding: 28px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  margin: 0 0 4px;
+  color: var(--fg);
+}
+
+.tagline {
+  font-size: 14px;
+  color: var(--accent);
+  margin: 0 0 14px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg-muted);
+  margin: 0 0 20px;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.techPill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.linkRow {
+  display: flex;
+  gap: 20px;
+}
+
+.primaryLink {
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.primaryLink:hover {
+  color: var(--accent);
+}
+
+.secondaryLink {
+  color: var(--fg-muted);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.secondaryLink:hover {
+  color: var(--fg);
+}
+
+.otherWrap {
+  margin-top: 64px;
+}
+
+.otherList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.otherRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.otherRow:hover {
+  color: var(--accent);
+}
+
+.otherLeft {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.otherName {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.otherDesc {
+  font-size: 14px;
+  color: var(--fg-muted);
+}
+
+.otherTech {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--fg-muted);
+  white-space: nowrap;
+}
