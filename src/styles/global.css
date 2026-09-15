@@ -37,6 +37,11 @@ body {
   font-family: 'Space Grotesk', sans-serif;
   transition: background 0.3s ease, color 0.3s ease;
   min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+}
+
+section[id] {
+  scroll-margin-top: 76px;
 }
 
 #root {
@@ -77,6 +82,17 @@ a {
   text-transform: uppercase;
   color: var(--fg-muted);
   margin: 0 0 16px;
+}
+
+.section-shell {
+  padding: 100px 32px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 760px) {
+  .section-shell {
+    padding: 72px 20px;
+  }
 }
 
 a {

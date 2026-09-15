@@ -4,10 +4,10 @@ import styles from './Skills.module.css';
 
 export default function Skills() {
   return (
-    <Reveal as="section" id="skills" aria-labelledby="skills-heading" className={styles.section}>
+    <Reveal as="section" id="skills" aria-labelledby="skills-heading" className="section-shell">
       <div className="container">
         <div className={styles.head}>
-          <p className="eyebrow">04 — Skills</p>
+          <p className="eyebrow">03 — Skills</p>
           <h2 id="skills-heading" className="section-title">
             Skills
           </h2>

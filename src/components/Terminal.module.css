@@ -40,6 +40,14 @@
   flex-direction: column;
 }
 
+@media (max-width: 760px) {
+  .body {
+    padding: 18px 16px;
+    min-height: 230px;
+    font-size: 12px;
+  }
+}
+
 .line {
   display: flex;
   gap: 8px;

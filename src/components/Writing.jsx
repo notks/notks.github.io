@@ -4,10 +4,10 @@ import styles from './Writing.module.css';
 
 export default function Writing() {
   return (
-    <Reveal as="section" id="writing" aria-labelledby="writing-heading" className={styles.section}>
+    <Reveal as="section" id="writing" aria-labelledby="writing-heading" className="section-shell">
       <div className="container">
         <div className={styles.head}>
-          <p className="eyebrow">05 — Writing</p>
+          <p className="eyebrow">04 — Writing</p>
           <h2 id="writing-heading" className="section-title">
             Writing
           </h2>

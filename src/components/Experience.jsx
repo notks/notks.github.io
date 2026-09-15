@@ -4,7 +4,7 @@ import styles from './Experience.module.css';
 
 export default function Experience() {
   return (
-    <Reveal as="section" id="experience" aria-labelledby="experience-heading" className={styles.section}>
+    <Reveal as="section" id="experience" aria-labelledby="experience-heading" className="section-shell">
       <div className="container">
         <div className={styles.head}>
           <p className="eyebrow">02 — Experience</p>

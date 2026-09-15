@@ -1,7 +1,12 @@
 .section {
   padding: 120px 32px;
   border-top: 1px solid var(--border);
-  scroll-margin-top: 80px;
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 88px 20px;
+  }
 }
 
 .inner {
@@ -11,10 +16,11 @@
 }
 
 .heading {
-  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-size: clamp(1.85rem, 5.6vw, 3.25rem);
   letter-spacing: -0.02em;
   margin: 0 0 28px;
   color: var(--fg);
+  text-wrap: pretty;
 }
 
 .email {
@@ -23,6 +29,13 @@
   color: var(--fg);
   text-decoration-color: var(--border);
   text-underline-offset: 6px;
+  word-break: break-word;
+}
+
+@media (max-width: 760px) {
+  .email {
+    font-size: 18px;
+  }
 }
 
 .socialRow {

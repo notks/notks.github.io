@@ -1,20 +1,27 @@
-.section {
-  padding: 100px 32px;
-  border-top: 1px solid var(--border);
-  scroll-margin-top: 80px;
-}
-
 .head {
   margin-bottom: 56px;
 }
 
+@media (max-width: 760px) {
+  .head {
+    margin-bottom: 36px;
+  }
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 761px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 32px;
+  }
 }
 
 .card {
@@ -22,11 +29,19 @@
   border-radius: 12px;
   overflow: hidden;
   background: var(--bg-elevated);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 .media {
+  position: relative;
   aspect-ratio: 16 / 9;
-  background: repeating-linear-gradient(135deg, var(--bg-subtle) 0 12px, var(--border) 12px 13px);
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +54,13 @@
 }
 
 .cardBody {
-  padding: 28px;
+  padding: 22px 20px;
+}
+
+@media (min-width: 761px) {
+  .cardBody {
+    padding: 28px;
+  }
 }
 
 .cardTitle {
@@ -82,7 +103,30 @@
 
 .linkRow {
   display: flex;
+  align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.inDevBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--accent-soft);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--fg);
+}
+
+.inDevDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: blink 1.6s steps(1) infinite;
 }
 
 .primaryLink {
@@ -107,7 +151,21 @@
 }
 
 .otherWrap {
-  margin-top: 64px;
+  margin-top: 48px;
+}
+
+@media (min-width: 761px) {
+  .otherWrap {
+    margin-top: 64px;
+  }
+}
+
+.otherNote {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--fg-muted);
+  margin: 0 0 4px;
+  max-width: 620px;
 }
 
 .otherList {
@@ -120,13 +178,23 @@
 
 .otherRow {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 24px;
+  gap: 6px;
   padding: 18px 0;
   border-top: 1px solid var(--border);
   text-decoration: none;
   color: var(--fg);
+  transition: color 0.15s ease;
+}
+
+@media (min-width: 761px) {
+  .otherRow {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
+  }
 }
 
 .otherRow:hover {

@@ -13,7 +13,7 @@ export default function Terminal() {
         <span className={styles.dot} />
         <span className={styles.dot} />
         <span className={styles.dot} />
-        <span className={styles.path}>~/alex-rivera</span>
+        <span className={styles.path}>~/notks</span>
       </div>
       <div className={styles.body}>
         {lines.map((line, i) => (

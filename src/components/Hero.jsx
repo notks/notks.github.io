@@ -1,4 +1,4 @@
-import { socials } from '../data/content';
+import { socials, heroEyebrow, heroHeading, heroBody } from '../data/content';
 import Terminal from './Terminal';
 import styles from './Hero.module.css';
 
@@ -9,14 +9,13 @@ export default function Hero() {
         <div className={styles.grid}>
           <div>
             <p className={styles.eyebrow} style={{ animationDelay: '0s' }}>
-              Software Engineer — Full-Stack
+              {heroEyebrow}
             </p>
             <h1 className={styles.heading} style={{ animationDelay: '0.05s' }}>
-              Building fast, reliable software from database to browser.
+              {heroHeading}
             </h1>
             <p className={styles.body} style={{ animationDelay: '0.1s' }}>
-              Based in San Francisco. I work across the stack — distributed systems, APIs, and
-              the interfaces on top of them — with a focus on reliability and speed.
+              {heroBody}
             </p>
             <div className={styles.buttonRow} style={{ animationDelay: '0.15s' }}>
               <a href="#work" className={styles.primaryButton}>

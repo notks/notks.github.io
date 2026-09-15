@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { navLinks, resumeHref } from '../data/content';
+import { navLinks, resumeHref, resumeDownloadName, wordmark } from '../data/content';
 import styles from './Header.module.css';
 
-const MOBILE_QUERY = '(max-width: 640px)';
+const MOBILE_QUERY = '(max-width: 760px)';
 
 export default function Header({ isDark, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef(null);
+  const menuButtonRef = useRef(null);
 
   useEffect(() => {
     const mq = window.matchMedia(MOBILE_QUERY);
@@ -21,7 +22,10 @@ export default function Header({ isDark, toggleTheme }) {
     if (!menuOpen) return undefined;
 
     const onKeyDown = (e) => {
-      if (e.key === 'Escape') setMenuOpen(false);
+      if (e.key === 'Escape') {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
     };
     const onClickOutside = (e) => {
       if (headerRef.current && !headerRef.current.contains(e.target)) setMenuOpen(false);
@@ -34,11 +38,13 @@ export default function Header({ isDark, toggleTheme }) {
     };
   }, [menuOpen]);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className={styles.header} ref={headerRef}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.wordmark}>
-          Alex Rivera
+          {wordmark}
         </a>
         <nav className={styles.nav} aria-label="Primary">
           {navLinks.map((link) => (
@@ -55,15 +61,18 @@ export default function Header({ isDark, toggleTheme }) {
             aria-pressed={isDark}
             className={styles.toggle}
           >
-            <span className={`${styles.thumb} ${isDark ? styles.thumbDark : ''}`} />
+            <span className={styles.toggleTrack}>
+              <span className={`${styles.thumb} ${isDark ? styles.thumbDark : ''}`} />
+            </span>
           </button>
-          <a href={resumeHref} download className={styles.resumeButton}>
+          <a href={resumeHref} download={resumeDownloadName} className={styles.resumeButton}>
             Résumé ↓
           </a>
           <button
+            ref={menuButtonRef}
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label="Toggle menu"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             className={`${styles.menuButton} ${menuOpen ? styles.menuButtonOpen : ''}`}
@@ -77,12 +86,7 @@ export default function Header({ isDark, toggleTheme }) {
       {menuOpen && (
         <nav id="mobile-menu" className={styles.mobileMenu} aria-label="Mobile">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={styles.mobileLink}
-              onClick={() => setMenuOpen(false)}
-            >
+            <a key={link.href} href={link.href} className={styles.mobileLink} onClick={closeMenu}>
               {link.label}
             </a>
           ))}

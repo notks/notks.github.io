@@ -1,12 +1,23 @@
 .hero {
   padding: 140px 32px 100px;
+  overflow: hidden;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 64px;
   align-items: center;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 96px 20px 64px;
+  }
+
+  .grid {
+    gap: 44px;
+  }
 }
 
 .eyebrow {
@@ -18,8 +29,8 @@
 }
 
 .heading {
-  font-size: clamp(2.75rem, 5.5vw, 4.25rem);
-  line-height: 1.05;
+  font-size: clamp(2.1rem, 6.4vw, 4.25rem);
+  line-height: 1.06;
   letter-spacing: -0.03em;
   margin: 0 0 24px;
   color: var(--fg);
@@ -44,7 +55,7 @@
 }
 
 .primaryButton {
-  padding: 12px 24px;
+  padding: 14px 24px;
   border-radius: 6px;
   background: var(--accent);
   color: var(--on-accent);
@@ -59,7 +70,7 @@
 }
 
 .secondaryButton {
-  padding: 12px 24px;
+  padding: 14px 24px;
   border-radius: 6px;
   border: 1px solid var(--border);
   color: var(--fg);
